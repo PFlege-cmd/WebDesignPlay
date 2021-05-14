@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+		<style>
+			#glogo{
+				position:relative;
+				top:20px;
+				left: -50px;
+				width:300px;
+			}
+			div{
+				text-align:center;		
+			}
+			#tbox{
+				width:400px;
+				height:50px;
+				border-radius:25px;
+			}
+			#tbut{
+				position: relative;
+				top: 50px;
+				right: 320px;
+			}
+			#tbut2{
+				position: relative;
+				top: 50px;
+				right: 300px;
+				
+			}
+			
+			#tbut:hover, #tbut2:hover{
+				background-color:red;
+				background-position: -99.99% 0;
+			}			
+			form{
+				border-radius:40px;
+				text-align:center;
+				position:relative;
+				top:100px;
+				left: 100px;
+			}
+			.gimg {
+				color:purple;
+				position:absolute;
+				top:0px;
+				right:170px;
+				text-align:right;
+				text-decoration:none;
+				z-index:0;
+			}
+			.gadv {
+				color:purple;
+				position:absolute;
+				top:0px;
+				right:0px;
+				text-align:right;
+				text-decoration:none;
+				z-index:0;
+			}
+			.gimg:hover,.gadv:hover{
+				text-decoration:underline;		
+			}
+		</style>
+    </head>
+    <body>
+		<div>
+			<img id="glogo" src="googlelogo.png">
+		</div>
+		<a class="gimg" href="google_image.html"> Google Image</a>
+		<a class="gadv" href="google_advanced.html"> Google Advanced Search</a>
+		<form action="https://google.com/search">
+			<input id="tbox" type="text" name="q" style="color:green">			
+			<input id="tbut" type="submit" name="btnK" value="Google Search">
+			<input id="tbut2" type="submit" name="btnI" value="Ima feeling lucky" data-ved="0ahUKEwiNm6S0jYLrAhXslnIEHYv2B30QnRsIDg">
+			
+		</form>
+    </body>
+</html>
