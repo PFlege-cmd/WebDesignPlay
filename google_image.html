@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Google Image</title>
+		<style>
+			#glogo{
+				position:relative;
+				top:20px;
+				left: -50px;
+				width:300px;
+			}
+			div{
+				text-align:center;
+				
+				
+			}
+			#tbox{				
+				height:50px;
+				width:500px;
+				border-radius:25px;
+			}
+			#tbut{
+				position: relative;
+				top: 50px;
+				left: -160px;
+			}
+			form{
+				border-radius:40px;
+				text-align:center;
+				position:relative;
+				top:100px;
+				left: 50px;
+			}
+			#s {
+				color:purple;
+				position:absolute;
+				top:0px;
+				right:170px;
+				text-align:right;
+				text-decoration:none;
+				z-index:0;
+			}
+			#sa {
+				color:purple;
+				position:absolute;
+				top:0px;
+				right:0px;
+				text-align:right;
+				text-decoration:none;
+				z-index:0;
+			}
+			#s:hover,#sa:hover{
+				text-decoration:underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img id="glogo" src="googlelogo.png">
+		</div>
+		<a id ="s" href="index.html">Google Search</a>
+		<a id= "sa" href="google_advanced.html">Google Advanced Search</a>
+		<form action="https://google.com/search" method="get">
+		<!----"http://images.google.com/images"-->
+			<div>
+				<input id="tbox" type="text" name="q">
+				<input id = "hid" type="hidden" name="tbm" value="isch">
+				<input id="tbut" type="submit" value="Google Image Search">
+			</div>
+		</form>
+	</body>
+</html>
