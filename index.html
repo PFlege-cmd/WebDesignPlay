@@ -5,34 +5,61 @@
 		<style>
 			#glogo{
 				position:relative;
-				top:20px;
-				left: -50px;
+				top:50px;
+				
 				width:300px;
 			}
-			div{
-				text-align:center;		
+			form{
+				text-align:center;	
 			}
+			div{
+				
+				text-align:center;	
+			}
+			#test_div{
+				margin:auto;
+			}
+			
+			
 			#tbox{
-				width:400px;
+				position:relative;
+				left:-100;
+				margin:auto;
+				width:600px;
 				height:50px;
 				border-radius:25px;
-				border-color: grey;
+				
 			}
+			
+			#tbox:hover{
+				box-shadow: 0 0 4px grey;
+			}
+			
 			#tbut{
 				position: relative;
 				top: 50px;
-				right: 320px;
+				
 			}
 			#tbut2{
 				position: relative;
 				top: 50px;
-				right: 300px;
+				
 				
 			}
 			
-			#tbut:hover, #tbut2:hover{
-				background-color:red;
+			.gbut{
+				border-color:white;
+				border-radius:5px;
+			}
+			
+			.gbut:hover{
+				box-shadow: 0 0 2px grey;
+			}
+			
+			#tbox:hover{
 				background-position: -99.99% 0;
+				border-style:outset;
+				
 			}			
 			form{
 				border: green;
@@ -71,11 +98,15 @@
 		</div>
 		<a class="gimg" href="google_image.html"> Google Image</a>
 		<a class="gadv" href="google_advanced.html"> Google Advanced Search</a>
+		<div>
 		<form action="https://google.com/search">
-			<input id="tbox" type="text" name="q" style="color:green">			
-			<input id="tbut" type="submit" name="btnK" value="Google Search">
-			<input id="tbut2" type="submit" name="btnI" value="Ima feeling lucky" data-ved="0ahUKEwiNm6S0jYLrAhXslnIEHYv2B30QnRsIDg">
-			
+		
+			<input id="tbox" type="text" name="q" style="color:green">	
+			<div id="test_div">
+				<input id="tbut" class= "gbut" type="submit" name="btnK" value="Google Search">
+				<input id="tbut2" class= "gbut" type="submit" name="btnI" value="Ima feeling lucky" data-ved="0ahUKEwiNm6S0jYLrAhXslnIEHYv2B30QnRsIDg">
+			<div>	
 		</form>
+		</div>
     </body>
 </html>
