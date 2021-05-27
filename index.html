@@ -5,35 +5,43 @@
 		<style>
 			#glogo{
 				position:relative;
-				top:50px;
-				
-				width:300px;
-			}
-			form{
-				text-align:center;	
-			}
-			div{
-				
-				text-align:center;	
-			}
-			#test_div{
-				margin:auto;
+				top:50px;				
+				width:275px;
 			}
 			
+			input{
+				border-style:solid;
+			}
+			
+			div{				
+				text-align:center;	
+			}
 			
 			#tbox{
 				position:relative;
 				left:-100;
 				margin:auto;
 				width:600px;
-				height:50px;
+				height:40px;
 				border-radius:25px;
+				border-width:1px;
+				background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+				background-repeat: no-repeat;
+				background-position: left center;
+				padding-left: 40px;
+
 				
 			}
 			
-			#tbox:hover{
-				box-shadow: 0 0 4px grey;
+			@media(max-width:670px){
+				#tbox{
+					width:90%;
+				}
 			}
+			
+			<!--#tbox:hover{
+				box-shadow: none;
+			}-->
 			
 			#tbut{
 				position: relative;
@@ -48,8 +56,11 @@
 			}
 			
 			.gbut{
-				border-color:white;
+				border-color:none;
 				border-radius:5px;
+				width:125px;
+				height:40px;
+				border:none;
 			}
 			
 			.gbut:hover{
@@ -67,27 +78,28 @@
 				text-align:center;
 				position:relative;
 				top:100px;
-				left: 100px;
+				
 			}
-			.gimg {
+			
+			.glinks{
 				color:purple;
 				position:absolute;
-				top:0px;
-				right:170px;
+				top:5px;
 				text-align:right;
 				text-decoration:none;
-				z-index:0;
 			}
-			.gadv {
-				color:purple;
-				position:absolute;
-				top:0px;
-				right:0px;
-				text-align:right;
-				text-decoration:none;
-				z-index:0;
+			
+			#gimg {
+				
+				right:200px;
+				
 			}
-			.gimg:hover,.gadv:hover{
+			#gadv {
+				
+				right:10px;
+				
+			}
+			.glinks:hover{
 				text-decoration:underline;		
 			}
 		</style>
@@ -96,15 +108,18 @@
 		<div>
 			<img id="glogo" src="googlelogo.png">
 		</div>
-		<a class="gimg" href="google_image.html"> Google Image</a>
-		<a class="gadv" href="google_advanced.html"> Google Advanced Search</a>
+		<a id="gimg" class="glinks" href="google_image.html"> Google Image</a>
+		<a id="gadv" class="glinks" href="google_advanced.html"> Google Advanced Search</a>
 		<div>
 		<form action="https://google.com/search">
 		
-			<input id="tbox" type="text" name="q" style="color:green">	
-			<div id="test_div">
-				<input id="tbut" class= "gbut" type="submit" name="btnK" value="Google Search">
-				<input id="tbut2" class= "gbut" type="submit" name="btnI" value="Ima feeling lucky" data-ved="0ahUKEwiNm6S0jYLrAhXslnIEHYv2B30QnRsIDg">
+			<input id="tbox" type="text" name="q">	
+			<div>
+				<img id = "magnifying" src=""
+			</div>
+			<div id="test_div">			
+				<input id="tbut" class= "gbut" type="submit" name="btnK" value="Google Search">				
+				<input id="tbut2" class= "gbut" type="submit" name="btnI" value="Ima feeling lucky" data-ved="0ahUKEwiNm6S0jYLrAhXslnIEHYv2B30QnRsIDg">				
 			<div>	
 		</form>
 		</div>
