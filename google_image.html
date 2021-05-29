@@ -19,10 +19,27 @@
 				width:500px;
 				border-radius:25px;
 			}
-			#tbut{
+			#div_but{
+			
 				position: relative;
+				top: 60px;
+			}
+			
+			#tbut{
+				<!--position: relative;
 				top: 50px;
-				left: -160px;
+				left: -160px;-->
+				position:absolute;
+				border-color:none;
+				border-radius:5px;
+				
+				width:125px;
+				height:40px;
+				border:none;
+			}
+			
+			#tbut:hover{
+				box-shadow: 0 0 2px grey;
 			}
 			form{
 				border-radius:40px;
@@ -55,18 +72,23 @@
 		</style>
 	</head>
 	<body>
+	
 		<div>
 			<img id="glogo" src="googlelogo.png">
 		</div>
 		<a id ="s" href="index.html">Google Search</a>
 		<a id= "sa" href="google_advanced.html">Google Advanced Search</a>
+		<div>
 		<form action="https://google.com/search" method="get">
 		<!----"http://images.google.com/images"-->
-			<div>
+			
 				<input id="tbox" type="text" name="q">
 				<input id = "hid" type="hidden" name="tbm" value="isch">
-				<input id="tbut" type="submit" value="Google Image Search">
-			</div>
+				<div id="div_but">
+					<input id="tbut" type="submit" value="Google Image Search">
+				</div>
+			
 		</form>
+		</div>
 	</body>
 </html>

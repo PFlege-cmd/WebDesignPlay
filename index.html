@@ -17,6 +17,15 @@
 				text-align:center;	
 			}
 			
+			#magnifying{
+				position: relative;
+				top:-33px;
+				right: 297px;
+				height: 25px;
+				width: 25px;
+			}
+			
+			
 			#tbox{
 				position:relative;
 				left:-100;
@@ -25,7 +34,6 @@
 				height:40px;
 				border-radius:25px;
 				border-width:1px;
-				background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
 				background-repeat: no-repeat;
 				background-position: left center;
 				padding-left: 40px;
@@ -37,27 +45,42 @@
 				#tbox{
 					width:90%;
 				}
+				#magnifying{
+					position:absolute;
+					top:12px;
+					left:3.5%;
+				}
+				#test_div{
+				
+
+					top:50px;
+				}
 			}
 			
-			<!--#tbox:hover{
-				box-shadow: none;
-			}-->
+			#but_div{
+					position:relative;				
+					top: 60px;					
+				}
 			
+			#tbox:hover{
+				box-shadow: 0 0 2px grey;
+			}
+			<!--
 			#tbut{
 				position: relative;
-				top: 50px;
 				
 			}
 			#tbut2{
 				position: relative;
-				top: 50px;
 				
 				
-			}
+			}-->
 			
 			.gbut{
+				position:absolute;
 				border-color:none;
 				border-radius:5px;
+				
 				width:125px;
 				height:40px;
 				border:none;
@@ -73,9 +96,8 @@
 				
 			}			
 			form{
-				border: green;
 				border-radius:40px;
-				text-align:center;
+				
 				position:relative;
 				top:100px;
 				
@@ -115,12 +137,12 @@
 		
 			<input id="tbox" type="text" name="q">	
 			<div>
-				<img id = "magnifying" src=""
+				<img id = "magnifying" src="mgnifying_glass.png">
 			</div>
-			<div id="test_div">			
+			<div id="but_div">			
 				<input id="tbut" class= "gbut" type="submit" name="btnK" value="Google Search">				
 				<input id="tbut2" class= "gbut" type="submit" name="btnI" value="Ima feeling lucky" data-ved="0ahUKEwiNm6S0jYLrAhXslnIEHYv2B30QnRsIDg">				
-			<div>	
+			</div>	
 		</form>
 		</div>
     </body>
