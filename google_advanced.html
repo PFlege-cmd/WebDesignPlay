@@ -1,49 +1,32 @@
-<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Google Advanced Search</title>
-		<style>
+    <head>
+        <title>Google Advanced Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
 			#glogo{
 				position:relative;
 				top: 15px;
 				left: 15px;
 				width:75px;
 			}
-			.btext{
-				position:absolute;
-				left:0px;
-				text-align:left;
-			}
-			.field{
-			    position:absolute;
-				left:200px;
-				top:0px;
-			}
-			.heights0{
-				top:0px;
-			}
-			.heights1{
-				top:25px;
-			}
-			.heights2{
-				top:50px;
-			}
-			.heights3{
-				top:75px;
-			}
-			#sbut{
-				background-color:blue;
-				color:white;
-				position: absolute;
-				left:200px;
-				top: 100px;
-			}
-			form{
-				white-space:nowrap;
-				position:absolute;
-				top:200px;
-				text-align:center;
-				
+            .grid {
+				position: relative;
+				top: 50px;
+                display: grid;
+				margin: 40px;              
+                grid-column-gap: 20px;
+                grid-row-gap: 10px;
+                grid-template-columns: 200px  auto auto;
+            }
+
+            .grid-item {
+                background-color: white;
+				height: 20;
+                padding: 0px;
+                text-align: left;
+            }
+			.grid-item > input {
+				width:100%;
 			}
 			#gimg {
 				color:purple;
@@ -51,7 +34,7 @@
 				top:0px;
 				right:170px;
 				text-align:right;
-				z-index:0;
+				
 			}
 			#gs {
 				color:purple;
@@ -59,36 +42,53 @@
 				top:0px;
 				right:0px;
 				text-align:right;
-				z-index:0;
-			}
-			.btext{
 				
 			}
-		</style>
-	</head>
-	
-	<body>
+			
+			@media(max-width: 1000px){
+				.description{
+					color: white;
+				}
+			}
+			
+			
+        </style>
+    </head>
+    <body>
+	<div style="border-bottom-style:solid; height:125px;">
 		<img id ="glogo" src = "googlelogo.png" alt="googleimage">
 		<a id= "gimg" href="google_image.html">Google Image Search</a>
 		<a id= "gs" href="index.html">Google Search</a>
-		<form action="http://google.com/search" method="get">
-			<div class="btext heights0" id ="btext0">
-					all these words
-					<input id="tbox" class="field" type="text" placeholder="all these words" name="as_q">
+	</div>
+
+		<div>
+		<h3 style="color:orange; position:absolute; left: 50px;">Search pages which...</h3>
+			<form class="grid" action="http://google.com/search" method="get">
+			<div class="grid-item">all these words</div>
+			<div class="grid-item"><input class="field" type="text" placeholder="all these words" name="as_q"></div>
+			<div class="grid-item description">Most important words</div>
+			
+			<div class="grid-item">this exact word or phrase</div>
+			<div class="grid-item"><input class="field" type="text" placeholder="this exact word or phrase" name="as_epq"></div>
+			<div class="grid-item description">put searched words between exclamation marks</div>
+			
+			<div class="grid-item">any of these words</div>
+			<div class="grid-item"><input class="field" type="text" placeholder="any of these words" name="as_oq"></div>
+			<div class="grid-item description">place OR between desired words</div>
+			
+			<div class="grid-item">none of these words</div>
+			<div class="grid-item"><input class="field" type="text" placeholder="none of these words" name="as_eq"></div>
+			<div class="grid-item description">place a minus-sign between words which shouldn't be shown</div>
+			
+			<div class="grid-item"></div>
+			<div class="grid-item" id="sbut">
+				<div id="test">
+				<input type="submit" value="Google Advanced Search">
+				</div>
 			</div>
-			<div class="btext heights1" id ="btext1">
-					this exact word or phrase
-					<input id="tbox1" class="field" type="text" placeholder="this exact word or phrase" name="as_epq">
-			</div>
-			<div class="btext heights2" id ="btext2">
-					any of these words
-					<input id="tbox2" class="field" type="text" placeholder="any of these words" name="as_oq">
-			</div>
-			<div class="btext heights3" id ="btext3">
-					none of these words
-					<input id="tbox3" class="field" type="text" placeholder="none of these words" name="as_eq">
-			</div>
-			<input id="sbut" class="field" type="submit" value="Google Advanced Search">
 		</form>
-	</body>
+	</div>
+            
+        
+    </body>
 </html>

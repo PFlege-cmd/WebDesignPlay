@@ -5,19 +5,49 @@
 		<style>
 			#glogo{
 				position:relative;
-				top:20px;
-				left: -50px;
-				width:300px;
+				top:50px;				
+				width:275px;
+				
 			}
 			div{
 				text-align:center;
 				
 				
 			}
-			#tbox{				
-				height:50px;
-				width:500px;
+			
+			#magnifying{
+				position: relative;
+				top:-33px;
+				right: 297px;
+				height: 25px;
+				width: 25px;
+			}
+			
+			#tbox{
+				position:relative;
+				left:-100;
+				margin:auto;
+				width:600px;
+				height:40px;
 				border-radius:25px;
+				border-width:1px;
+				background-repeat: no-repeat;
+				background-position: left center;
+				padding-left: 40px;
+
+				
+			}
+			
+			@media(max-width:670px){
+				#tbox{
+					width:90%;
+				}
+				#magnifying{
+					position:absolute;
+					top:12px;
+					left:3.5%;
+				}
+				
 			}
 			#div_but{
 			
@@ -33,7 +63,7 @@
 				border-color:none;
 				border-radius:5px;
 				
-				width:125px;
+				width:150px;
 				height:40px;
 				border:none;
 			}
@@ -41,14 +71,15 @@
 			#tbut:hover{
 				box-shadow: 0 0 2px grey;
 			}
+
+			
 			form{
-				border-radius:40px;
-				text-align:center;
+				border-radius:40px;				
 				position:relative;
 				top:100px;
-				left: 50px;
+				
 			}
-			#s {
+			#g_ser {
 				color:purple;
 				position:absolute;
 				top:0px;
@@ -57,7 +88,7 @@
 				text-decoration:none;
 				z-index:0;
 			}
-			#sa {
+			#g_adv {
 				color:purple;
 				position:absolute;
 				top:0px;
@@ -76,13 +107,16 @@
 		<div>
 			<img id="glogo" src="googlelogo.png">
 		</div>
-		<a id ="s" href="index.html">Google Search</a>
-		<a id= "sa" href="google_advanced.html">Google Advanced Search</a>
+		<a id ="g_ser" href="index.html">Google Search</a>
+		<a id= "g_adv" href="google_advanced.html">Google Advanced Search</a>
 		<div>
 		<form action="https://google.com/search" method="get">
 		<!----"http://images.google.com/images"-->
 			
 				<input id="tbox" type="text" name="q">
+				<div>
+					<img id = "magnifying" src="mgnifying_glass.png">
+				</div>
 				<input id = "hid" type="hidden" name="tbm" value="isch">
 				<div id="div_but">
 					<input id="tbut" type="submit" value="Google Image Search">
