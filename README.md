@@ -1,3 +1,3 @@
 # WebDesignPlay
 Exercises for web-development
-[] do toDo-list
+-[ ] do toDo-list
